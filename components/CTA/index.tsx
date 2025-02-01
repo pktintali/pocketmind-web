@@ -2,8 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import EmailModal from "../Common/EmailModal";
 
 const CTA = () => {
+  const [visibility, setVisibility] = React.useState(false);
+  const handleModal = () => {
+    setVisibility(!visibility);
+  };
   return (
     <>
       {/* <!-- ===== CTA Start ===== --> */}
@@ -32,9 +37,9 @@ const CTA = () => {
                 Join With Us Today & Increase Your Productivity
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
+                Discover a new way to learn with PocketMind. Got something in
+                mind and you don't know what it is, PocketMind is here for you
+                to explain it to you.
               </p>
             </motion.div>
             <motion.div
@@ -63,8 +68,8 @@ const CTA = () => {
                   alt="Saly"
                   className="hidden xl:block"
                 />
-                <a
-                  href="/auth/signup"
+                <button
+                  onClick={() => setVisibility(true)}
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
                   Sign up free
@@ -82,7 +87,8 @@ const CTA = () => {
                     alt="Arrow"
                     className="hidden dark:block"
                   />
-                </a>
+                </button>
+                <EmailModal visibility={visibility} handleClose={handleModal} />
               </div>
             </motion.div>
           </div>

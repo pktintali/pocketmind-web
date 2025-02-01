@@ -13,20 +13,20 @@ import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import ComingSoon from "@/components/ComingSoon";
+import PhoneFrame from "@/components/PhoneFrame";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <ComingSoon />
+      {/* <ComingSoon /> */}
       {/* <Brands /> */}
       {/* <Feature /> */}
-      {/* <About /> */}
-      {/* <FeaturesTab /> */}
-      {/* <FunFact /> */}
+      <About />
+      {/* <FeaturesTab />x<FunFact /> */}
       {/* <Integration /> */}
-      {/* <CTA /> */}
-      {/* <FAQ /> */}
+      <CTA />
+      <FAQ />
       {/* <Testimonial /> */}
       {/* <Pricing /> */}
       {/* <Contact /> */}

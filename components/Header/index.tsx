@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import EmailModal from "../Common/EmailModal";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const pathUrl = usePathname();
 
@@ -27,6 +29,10 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyMenu);
   });
 
+  const handleClose = () => {
+    setShowPopup(false);
+  };
+
   return (
     <header
       className={`fixed left-0 top-0 z-99999 w-full py-7 ${
@@ -42,8 +48,8 @@ const Header = () => {
               <Image
                 src="/images/logo/pocketmind_logo.png"
                 alt="logo"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 className="w-full rounded-xl"
               />
               <span className="ml-3 text-3xl font-bold">PocketMind</span>
@@ -150,13 +156,14 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
 
-            <Link
-              href="#get-started"
+            <button
+              onClick={() => setShowPopup(true)}
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
               Get Started
-            </Link>
+            </button>
           </div>
+          <EmailModal visibility={showPopup} handleClose={handleClose} />
         </div>
       </div>
     </header>
