@@ -1,1 +1,1 @@
-AI Learning flashcards and gamified learning app.
+AI Flashcards generator for quick learning

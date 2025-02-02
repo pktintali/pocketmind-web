@@ -15,15 +15,15 @@ const Hero = () => {
                 🔥 Elevate Your Digital Learning Experience
               </h4>
               <h1 className="mb-6 text-4xl font-extrabold text-gray-900 dark:text-gray-100 xl:text-5xl">
-                Revolutionize Learning with{" "}
+                Learn Smarter & Faster with{" "}
                 <span className="relative inline-block before:absolute before:bottom-1 before:left-0 before:-z-1 before:h-2 before:w-full before:bg-yellow-300 dark:before:bg-yellow-500">
                   AI
                 </span>
               </h1>
               <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
-                Discover the future of learning with our AI-driven platform. Our
-                smart bots make education engaging and accessible, offering
-                interactive visuals and content like never before.
+                PocketMind is the ultimate AI flashcards generator app that
+                turns any topic into visually stunning, interactive flashcards
+                designed for 10x better retention.
               </p>
               <div className="mt-12">
                 <form action="https://formbold.com/s/obGDk" method="POST">
