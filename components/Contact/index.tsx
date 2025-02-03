@@ -184,22 +184,34 @@ const Contact = () => {
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Our Loaction
                 </h3>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+                <p>Sonbhadra, Uttar Pradesh India</p>
+                <p>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Sonbhadra,+Uttar+Pradesh,+India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="dark:text-primarydark text-primary"
+                  >
+                    Open in Google Maps
+                  </a>
+                </p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Email Address
                 </h3>
                 <p>
-                  <a href="#">yourmail@domainname.com</a>
+                  <a href="mailto:tdeveloperindia@gmail.com">
+                    tdeveloperindia@gmail.com
+                  </a>
                 </p>
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
+                  WhatsApp
                 </h4>
                 <p>
-                  <a href="#">+009 42334 6343 843</a>
+                  <a href="https://wa.me/917985270343">+917985270343</a>
                 </p>
               </div>
             </motion.div>

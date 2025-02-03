@@ -47,7 +47,7 @@ const Footer = () => {
                   anywhere.
                 </p>
 
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
+                {/* <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
                 </p>
                 <a
@@ -55,7 +55,7 @@ const Footer = () => {
                   className="font-medium text-black dark:text-white"
                 >
                   tdeveloperindia@gmail.com
-                </a>
+                </a> */}
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
@@ -90,14 +90,14 @@ const Footer = () => {
                         Home
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Product
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         href="#"
@@ -106,14 +106,14 @@ const Footer = () => {
                         Careers
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Pricing
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </motion.div>
 
@@ -140,22 +140,22 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
+                    {/* <li>
                       <a
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Company
                       </a>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <a
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Press media
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         href="#"
@@ -322,7 +322,11 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-5">
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a
+                    href="http://instagram.com/pocketmind_app"
+                    target="_blank"
+                    aria-label="social icon"
+                  >
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -333,7 +337,7 @@ const Footer = () => {
                     >
                       <g clipPath="url(#clip0_48_1499)">
                         <path
-                          d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z"
+                          d="M12 2.163C6.477 2.163 2 6.64 2 12.163C2 17.686 6.477 22.163 12 22.163C17.523 22.163 22 17.686 22 12.163C22 6.64 17.523 2.163 12 2.163ZM12 20.163C7.589 20.163 4 16.574 4 12.163C4 7.752 7.589 4.163 12 4.163C16.411 4.163 20 7.752 20 12.163C20 16.574 16.411 20.163 12 20.163ZM16.5 7.163C16.2239 7.163 15.95 7.276 15.7574 7.46863C15.5648 7.66126 15.4518 7.93518 15.4518 8.211C15.4518 8.48782 15.5648 8.76174 15.7574 8.95437C15.95 9.147 16.2239 9.26 16.5 9.26C16.7761 9.26 17.05 9.147 17.2426 8.95437C17.4352 8.76174 17.5482 8.48782 17.5482 8.211C17.5482 7.93518 17.4352 7.66126 17.2426 7.46863C17.05 7.276 16.7761 7.163 16.5 7.163ZM12 7.163C9.243 7.163 7 9.406 7 12.163C7 14.92 9.243 17.163 12 17.163C14.757 17.163 17 14.92 17 12.163C17 9.406 14.757 7.163 12 7.163ZM12 15.163C10.346 15.163 9 13.817 9 12.163C9 10.509 10.346 9.163 12 9.163C13.654 9.163 15 10.509 15 12.163C15 13.817 13.654 15.163 12 15.163Z"
                           fill=""
                         />
                       </g>
@@ -346,7 +350,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a
+                    href="http://x.com/pocketmind_app"
+                    target="_blank"
+                    aria-label="social icon"
+                  >
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -369,30 +377,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-                <li>
-                  <a href="#" aria-label="social icon">
-                    <svg
-                      className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clipPath="url(#clip0_48_1505)">
-                        <path
-                          d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_48_1505">
-                          <rect width="24" height="24" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
-                </li>
+                <li></li>
               </ul>
             </motion.div>
           </div>
