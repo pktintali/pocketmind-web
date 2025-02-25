@@ -271,6 +271,9 @@ const Footer = () => {
                   <Link href="/privacy">Privacy Policy</Link>
                 </li>
                 <li>
+                  <Link href="/terms">Terms of Use</Link>
+                </li>
+                <li>
                   <a href="#" className="hover:text-primary">
                     Support
                   </a>

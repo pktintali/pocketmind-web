@@ -1,11 +1,11 @@
 export default function Head() {
   return (
     <>
-      <title> PocketMind | A new way to learn with AI</title>
+      <title> PocketMind | AI Flashcards Generator for Learning</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="AI Flashcards generator for quick learning"
+        content="Generate beautiful AI Flashcards for quick learning"
       />
       <meta
         name="description"
