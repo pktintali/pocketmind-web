@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import EmailModal from "../Common/EmailModal";
+import DownloadModal from "../Common/EmailModal";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -160,10 +160,10 @@ const Header = () => {
               onClick={() => setShowPopup(true)}
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
-              Get Started
+              Download
             </button>
           </div>
-          <EmailModal visibility={showPopup} handleClose={handleClose} />
+          <DownloadModal visibility={showPopup} handleClose={handleClose} />
         </div>
       </div>
     </header>

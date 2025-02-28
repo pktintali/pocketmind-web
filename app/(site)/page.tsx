@@ -14,6 +14,7 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import ComingSoon from "@/components/ComingSoon";
 import PhoneFrame from "@/components/PhoneFrame";
+import DownloadSection from "@/components/Download";
 
 export default function Home() {
   return (

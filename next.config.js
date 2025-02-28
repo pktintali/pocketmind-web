@@ -16,6 +16,16 @@ const nextConfig = {
         hostname: "factjano-public-images.s3.ap-south-1.amazonaws.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "play.google.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        port: "",
+      },
     ],
   },
 };
