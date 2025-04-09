@@ -15,98 +15,117 @@ const FAQ = () => {
   return (
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+      <section className="overflow-hidden bg-gradient-to-b from-white to-gray-50 py-20 dark:from-blacksection dark:to-blacksection lg:py-25 xl:py-30">
         <div className="relative mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="absolute -bottom-16 -z-1 h-full w-full">
+          <div className="absolute -right-20 -top-20 -z-1 hidden md:block">
             <Image
-              fill
+              width={500}
+              height={500}
               src="/images/shape/shape-dotted-light.svg"
               alt="Dotted"
-              className="dark:hidden"
+              className="opacity-60 dark:hidden"
             />
             <Image
-              fill
+              width={500}
+              height={500}
               src="/images/shape/shape-dotted-light.svg"
               alt="Dotted"
-              className="hidden dark:block"
+              className="hidden opacity-60 dark:block"
             />
           </div>
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
 
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
+          <div className="mb-12 text-center md:mb-16">
+            <motion.span
+              variants={{
+                hidden: { opacity: 0, y: -10 },
+                visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="animate_left md:w-2/5 lg:w-1/2"
+              className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
             >
-              <span className="font-medium uppercase text-black dark:text-white">
-                OUR FAQS
-              </span>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Frequently Asked
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Questions
-                </span>
-              </h2>
+              FAQs
+            </motion.span>
+            <motion.h2
+              variants={{
+                hidden: { opacity: 0, y: -10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mb-4 text-3xl font-bold text-black dark:text-white md:text-4xl"
+            >
+              Frequently Asked Questions
+            </motion.h2>
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: -10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-body-color dark:text-body-color-dark mx-auto max-w-2xl"
+            >
+              Everything you need to know about PocketMind and how it works
+            </motion.p>
+          </div>
 
-              {/* <a
-                href="#"
-                className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <div className="shadow-faq overflow-hidden rounded-2xl bg-white backdrop-blur-lg dark:border dark:border-strokedark dark:bg-blacksection/60">
+              {faqData.map((faq, key) => (
+                <FAQItem
+                  key={key}
+                  faqData={{ ...faq, activeFaq, handleFaqToggle }}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center md:mt-16"
+          >
+            <a
+              href="/support"
+              className="hover:shadow-signUp inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-7 py-3 font-medium text-white hover:bg-opacity-90"
+            >
+              <span>Still have questions?</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <span className="duration-300 group-hover:pr-2">Know More</span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a> */}
-            </motion.div>
-
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right md:w-3/5 lg:w-1/2"
-            >
-              <div className="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
-                {faqData.map((faq, key) => (
-                  <FAQItem
-                    key={key}
-                    faqData={{ ...faq, activeFaq, handleFaqToggle }}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </div>
+                <path
+                  d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </motion.div>
         </div>
       </section>
       {/* <!-- ===== FAQ End ===== --> */}

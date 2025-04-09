@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type FaqData = {
   activeFaq: number;
   id: number;
@@ -8,55 +10,43 @@ type FaqData = {
 
 const FAQItem = ({ faqData }: { faqData: FaqData }) => {
   const { activeFaq, id, handleFaqToggle, quest, ans } = faqData;
+  const isActive = activeFaq === id;
 
   return (
-    <>
-      <div className="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
-        <button
-          onClick={() => {
-            handleFaqToggle(id);
-          }}
-          className="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium text-black dark:text-white lg:px-9 lg:py-7.5"
+    <div className="faq-item overflow-hidden">
+      <button
+        onClick={() => handleFaqToggle(id)}
+        className="text-heading flex w-full items-center justify-between px-6 py-5 font-medium transition-all duration-300 hover:bg-primary/5 
+          dark:hover:bg-primary/10 lg:px-9 lg:py-6"
+      >
+        <span className="text-left">{quest}</span>
+        <div
+          className={`relative ml-2 flex h-6 w-6 min-w-[24px] items-center justify-center rounded-full 
+          border-2 border-primary ${isActive ? "bg-primary" : ""}`}
         >
-          {quest}
+          <span
+            className={`absolute h-[2px] w-3 bg-primary transition-transform duration-300 
+            ${isActive ? "rotate-0 bg-white" : "rotate-0"}`}
+          ></span>
+          <span
+            className={`absolute h-3 w-[2px] bg-primary transition-transform duration-300 
+            ${isActive ? "rotate-0 opacity-0" : "rotate-0"}`}
+          ></span>
+        </div>
+      </button>
 
-          {activeFaq === id ? (
-            <svg
-              width="18"
-              height="4"
-              viewBox="0 0 18 4"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.1666 0.833374H10.1666H7.83331H0.833313V3.16671H7.83331H10.1666H17.1666V0.833374Z"
-                fill="currentColor"
-              />
-            </svg>
-          ) : (
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.83331 7.83337V0.833374H10.1666V7.83337H17.1666V10.1667H10.1666V17.1667H7.83331V10.1667H0.833313V7.83337H7.83331Z"
-                fill="currentColor"
-              />
-            </svg>
-          )}
-        </button>
-        <p
-          className={`border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-7.5 ${
-            activeFaq === id ? "block" : "hidden"
-          }`}
-        >
-          {ans}
-        </p>
+      <div
+        className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${
+          isActive ? "max-h-[1000px]" : "max-h-0"
+        }`}
+      >
+        <div className="border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-6">
+          <p className="text-body-color dark:text-body-color-dark text-base font-normal leading-relaxed">
+            {ans}
+          </p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
